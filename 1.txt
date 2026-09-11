@@ -1,0 +1,21 @@
+
+Create a modern, premium-looking e-commerce website UI/UX design for a fashion/lifestyle brand. Use a clean and minimalist layout with high-quality hero sections, smooth spacing, modern typography, glassmorphism effects, subtle animations, and a professional color palette. Include:
+• Responsive homepage
+• Modern navigation bar
+• Hero banner with CTA buttons
+• Featured products section
+• Product cards with hover effects
+• Categories section
+• Testimonials
+• Special offers/banner section • Newsletter subscription
+• Footer with social links
+
+
+Design style:
+•Premium, elegant, and visually appealing
+•Apple/Tesla-inspired modern aesthetic
+• Soft shadows, rounded corners, smooth gradients
+• Excellent mobile and desktop responsiveness
+• Conversion-focused UI/UX
+• Use modern ecommerce trends from 2026
+Add realistic product images, smooth transitions, and make the website look like a real high-end brand. Use clean code structure and modern Ul components.
