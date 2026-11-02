@@ -28,6 +28,7 @@ CATEGORIES = {
 SKIP_FILES = {"desktop.ini", "thumbs.db"}
 DRY_RUN = False
 
+
 def get_unique_destination(destination):
     if not destination.exists():
         return destination
