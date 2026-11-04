@@ -1,7 +1,9 @@
+import json
+
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 
-# Create your views here.
 def home(request):
     return JsonResponse(
         {
@@ -11,10 +13,23 @@ def home(request):
     )
 
 
+@csrf_exempt
 def shorten_url(request):
-    return JsonResponse(
-        {
-            "message": "This endpoint will shorten URLs. Please provide a URL to shorten.",
-            "status": "success",
-        }
-    )
+    if request.method == "POST":
+        # Handle the POST request to shorten a URL
+        data = json.loads(request.body)
+        return JsonResponse(
+            {
+                "message": "URL received for shortening.",
+                "url": data.get("url", ""),
+                "status": "success",
+            }
+        )
+    else:
+        return JsonResponse(
+            {
+                "message": "Invalid request method. Please use POST to shorten URLs.",
+                "status": "error",
+            },
+            status=405,
+        )
