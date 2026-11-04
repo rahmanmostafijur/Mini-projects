@@ -1,6 +1,7 @@
-import tkinter as tk
-import speedtest
 import threading
+import tkinter as tk
+
+import speedtest
 
 
 def start_test():

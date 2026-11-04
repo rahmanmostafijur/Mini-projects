@@ -1,5 +1,5 @@
-from tkinter import *
 import random
+from tkinter import *
 
 GAME_WIDTH = 800
 GAME_HEIGHT = 500
@@ -17,7 +17,7 @@ class Snake:
         self.coordinates = []
         self.squares = []
 
-        for i in range(0, BODY_PARTS):
+        for i in range(BODY_PARTS):
             self.coordinates.append([0, 0])
 
         for x, y in self.coordinates:
@@ -59,7 +59,7 @@ def next_turn(snake, food):
     if x == food.coordinates[0] and y == food.coordinates[1]:
         global score
         score += 1
-        label.config(text="Score: {}".format(score))
+        label.config(text=f"Score: {score}")
         canvas.delete("food")
         food = Food()
     else:
@@ -75,21 +75,13 @@ def next_turn(snake, food):
 
 def change_direction(new_direction):
     global direction
-    if new_direction == "left" and direction != "right":
-        direction = new_direction
-    elif new_direction == "right" and direction != "left":
-        direction = new_direction
-    elif new_direction == "up" and direction != "down":
-        direction = new_direction
-    elif new_direction == "down" and direction != "up":
+    if new_direction == "left" and direction != "right" or new_direction == "right" and direction != "left" or new_direction == "up" and direction != "down" or new_direction == "down" and direction != "up":
         direction = new_direction
 
 
 def check_collisions(snake):
     x, y = snake.coordinates[0]
-    if x < 0 or x >= GAME_WIDTH:
-        return True
-    elif y < 0 or y >= GAME_HEIGHT:
+    if x < 0 or x >= GAME_WIDTH or y < 0 or y >= GAME_HEIGHT:
         return True
 
     for body_part in snake.coordinates[1:]:
@@ -117,7 +109,7 @@ window.resizable(False, False)
 score = 0
 direction = "down"
 
-label = Label(window, text="Score: {}".format(score), font=("consolas", 40))
+label = Label(window, text=f"Score: {score}", font=("consolas", 40))
 label.pack()
 
 canvas = Canvas(window, bg=BACKGROUND_COLOR, height=GAME_HEIGHT, width=GAME_WIDTH)

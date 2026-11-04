@@ -1,5 +1,5 @@
-import pyttsx3
 import PyPDF2
+import pyttsx3
 
 book = r"C:\Users\musta\Downloads\Documents\Shob_Jatra_By_Humayun_Ahmed.pdf"
 

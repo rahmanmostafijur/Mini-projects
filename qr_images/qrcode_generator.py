@@ -1,5 +1,5 @@
-from distro import name
 import qrcode
+from distro import name
 
 url = input("Enter the URL to generate QR code: ")
 data = name() + " " + url  # Combine the name and URL into a single string
