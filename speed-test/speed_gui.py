@@ -32,6 +32,7 @@ def show_result(text):
     label.config(text=text)
     button.config(state="normal")
 
+
 root = tk.Tk()
 root.title("Speed Test")
 root.geometry("600x500")
@@ -39,7 +40,9 @@ root.geometry("600x500")
 label = tk.Label(root, text="Ready", font=("Helvetica", 16))
 label.pack(pady=40)
 
-button = tk.Button(root, text="Run Speed Test", command=start_test, font=("Times New Roman", 14))
+button = tk.Button(
+    root, text="Run Speed Test", command=start_test, font=("Times New Roman", 14)
+)
 button.pack()
 
 root.mainloop()

@@ -5,8 +5,7 @@ book = r"C:\Users\musta\Downloads\Documents\Shob_Jatra_By_Humayun_Ahmed.pdf"
 
 ts = pyttsx3.init()
 
-with open(book, 'rb') as book:
-
+with open(book, "rb") as book:
     pdf_reader = PyPDF2.PdfReader(book)
     page = len(pdf_reader.pages)
     print(page)
